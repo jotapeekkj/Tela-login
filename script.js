@@ -21,3 +21,15 @@ document.getElementById('btn-entrar').addEventListener('click', function() {
         alert('Campos preenchidos. Enviando formulário...');
     }
 });
+
+email.addEventListener('input', function() {
+    if (this.value.trim() !== '') {
+        this.classList.remove('invalid');
+    }
+});
+
+senha.addEventListener('input', function() {
+    if (this.value.trim() !== '') {
+        this.classList.remove('invalid'); 
+    }
+});
