@@ -6,30 +6,30 @@
     100% { transform: translateY(0); }
 }
 
-body {
-    margin: 0;
-    background-color: #ffffff;
-    font-family: 'League Spartan', sans-serif;
-    height: 100%;
-}
 
-body * {
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: #ffffff;
+    font-family: 'League Spartan', sans-serif;
+}
+
+
 .main-login {
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
 }
 
 .left-login {
     width: 50vw;
-    height: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,6 @@ body * {
 
 .right-login {
     width: 50vw;
-    height: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,6 +57,7 @@ body * {
     background-color: #f8f8f8;
     border-radius: 25px;
     box-shadow: 0px 10px 40px #e1e1e1;
+    animation: float 3s infinite;
 }
 
 .card-login > h1 {
@@ -92,9 +92,27 @@ body * {
     margin-bottom: 10px;
 }
 
+.textfield input:focus {
+    outline: none; 
+}
+
+.textfield input {
+    border: 1px solid #ccc;
+    transition: border-color 1s ease;
+}
+
+.textfield input.invalid {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0px;
+}
+
 .bot-login {
     background-color: #5F019E;
-    color: #FFFF35;
+    color: #ffff00;
     outline-color: #3F006A;
     border-radius: 15px;
     border: none;
@@ -105,19 +123,27 @@ body * {
     letter-spacing: 2px;
     cursor: pointer;
     box-shadow: 0px 10px 15px -12px #6C009E;
+    transition: 2s;
 }
+
+.bot-login:hover {
+    background-color: #ffff00;
+    color: #5F019E;
+    box-shadow: 0px 10px 15px -12px #ffff32
+}
+
 .left-login-image {
 width: 35vw;
 transform: rotateY(180deg);
 }
 
-@media only screen and (max-widht :950px) {
+@media only screen and (max-width :950px) {
     .card-login {
         width: 85%;
     }
 }
 
-@media only screen and (max-widht :600px) {
+@media only screen and (max-width :600px) {
     .main-login {
         flex-direction: column;
     }

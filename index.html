@@ -17,15 +17,19 @@
                 <h1>Login</h1>
                 <div class="textfield">
                     <label for="email">E-mail</label>
-                    <input type="email" name="Email" placeholder="exemplo123@gmail.com"> 
+                    <input type="email" id="email" name="email" placeholder="exemplo123@gmail.com">
+                    <div class="error-message" id="email-error"></div> 
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="senha"> 
+                    <input type="password" id="senha" name="senha" placeholder="senha">
+                    <div class="error-message" id="senha-error"></div> 
                 </div>
-                <button class="bot-login">Entrar</button>
-                    </div>
-                </div>
-            </main>
+                <button type="button" class="bot-login" id="btn-entrar">Entrar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
